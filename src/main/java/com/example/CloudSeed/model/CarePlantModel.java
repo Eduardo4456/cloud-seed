@@ -8,19 +8,20 @@ public class CarePlantModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "id_care")
+    private Long id;
 
     private String careType;
 
     public CarePlantModel() {
     }
 
-    public CarePlantModel(long id, String careType) {
+    public CarePlantModel(Long id, String careType) {
         this.id = id;
         this.careType = careType;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

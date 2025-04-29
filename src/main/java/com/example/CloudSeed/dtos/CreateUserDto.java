@@ -1,4 +1,4 @@
 package com.example.CloudSeed.dtos;
 
-public class CreateUserDto {
+public record CreateUserDto(String username, String email, String password) {
 }

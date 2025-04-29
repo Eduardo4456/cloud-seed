@@ -1,7 +1,6 @@
 package com.example.CloudSeed.model;
 
 import java.time.Instant;
-import java.util.List;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -13,7 +12,8 @@ public class UserModel {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name = "id_user")
+	private Long id;
 
 	@Column(name = "username")
 	private String username;
@@ -28,25 +28,25 @@ public class UserModel {
 	private Instant creationTimestamp;
 
 	@UpdateTimestamp
-	private Instant updatedTimInstant;
+	private Instant updatedTimestanp;
 
 	public UserModel() {
 	}
 
-	public UserModel(long id, String username, String email, String password, Instant creationTimestamp, Instant updatedTimInstant) {
+	public UserModel(Long id, String username, String email, String password, Instant creationTimestamp, Instant updatedTimInstant) {
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.creationTimestamp = creationTimestamp;
-		this.updatedTimInstant = updatedTimInstant;
+		this.updatedTimestanp = updatedTimInstant;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -82,11 +82,11 @@ public class UserModel {
 		this.creationTimestamp = creationTimestamp;
 	}
 
-	public Instant getUpdatedTimInstant() {
-		return updatedTimInstant;
+	public Instant getUpdatedTimestanp() {
+		return updatedTimestanp;
 	}
 
-	public void setUpdatedTimInstant(Instant updatedTimInstant) {
-		this.updatedTimInstant = updatedTimInstant;
+	public void setUpdatedTimestanp(Instant updatedTimestanp) {
+		this.updatedTimestanp = updatedTimestanp;
 	}
 }

@@ -8,7 +8,8 @@ public class PlantModel {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name = "id_plant")
+	private Long id;
 
 	@Column(name = "name_plant")
 	private String name;
@@ -26,7 +27,7 @@ public class PlantModel {
 		
 	}
 
-	public PlantModel(long id, String name, String species, double waterAmount, String description) {
+	public PlantModel(Long id, String name, String species, double waterAmount, String description) {
 		this.id = id;
 		this.name = name;
 		this.species = species;
@@ -34,11 +35,11 @@ public class PlantModel {
 		this.description = description;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
