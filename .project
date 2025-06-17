@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>com.plantcloudseed</name>
+=======
+	<name>com.project.cloudseed</name>
+>>>>>>> 3bca271 (Adicionando fucionalidades. Conectando as APIs. Corrigindo alguns erros.)
 	<comment></comment>
 	<projects>
 	</projects>

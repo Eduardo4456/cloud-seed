@@ -1,0 +1,702 @@
+[
+  {
+    "nome_popular": "Lírio-da-paz",
+    "nome_cientifico": "Spathiphyllum wallisii",
+    "temperatura_ideal_celsius": "15–28",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "Meia-sombra / luz indireta"
+  },
+  {
+    "nome_popular": "Espada-de-São-Jorge",
+    "nome_cientifico": "Sansevieria trifasciata",
+    "temperatura_ideal_celsius": "15–30",
+    "frequencia_rega": "cada 10–15 dias",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Samambaia",
+    "nome_cientifico": "Nephrolepis exaltata",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "2–3×/semana",
+    "luz": "indireta/sombra clara"
+  },
+  {
+    "nome_popular": "Jade",
+    "nome_cientifico": "Crassula ovata",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "1×/semana",
+    "luz": "sol pleno a meia-sombra"
+  },
+  {
+    "nome_popular": "Kalanchoe",
+    "nome_cientifico": "Kalanchoe spp.",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "2×/semana (verão), 1×/sem (inverno)",
+    "luz": "meia-sombra + sol"
+  },
+  {
+    "nome_popular": "Palmeira-ráfis",
+    "nome_cientifico": "Rhapis excelsa",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "1×/semana",
+    "luz": "meia-sombra"
+  },
+  {
+    "nome_popular": "Clorofito",
+    "nome_cientifico": "Chlorophytum comosum",
+    "temperatura_ideal_celsius": "15–27",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta a meia-sombra"
+  },
+  {
+    "nome_popular": "Aloe vera",
+    "nome_cientifico": "Aloe vera",
+    "temperatura_ideal_celsius": "15–35",
+    "frequencia_rega": "a cada 15 dias",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Jiboia",
+    "nome_cientifico": "Epipremnum aureum",
+    "temperatura_ideal_celsius": "17–30",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Zamioculca",
+    "nome_cientifico": "Zamioculcas zamiifolia",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "mensal",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Monstera",
+    "nome_cientifico": "Monstera deliciosa",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "quando solo seco 1cm",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus elastica",
+    "nome_cientifico": "Ficus elastica",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "solo levemente úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus lyrata",
+    "nome_cientifico": "Ficus lyrata",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Aspidistra",
+    "nome_cientifico": "Aspidistra elatior",
+    "temperatura_ideal_celsius": "16–24",
+    "frequencia_rega": "quando solo seco",
+    "luz": "baixa"
+  },
+  {
+    "nome_popular": "Hera inglesa",
+    "nome_cientifico": "Hedera helix",
+    "temperatura_ideal_celsius": "15–21",
+    "frequencia_rega": "solo úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Bromélia",
+    "nome_cientifico": "Bromeliaceae",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "manter roseta úmida",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Calathea",
+    "nome_cientifico": "Calathea spp.",
+    "temperatura_ideal_celsius": "18–29",
+    "frequencia_rega": "solo úmido",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Pilea",
+    "nome_cientifico": "Pilea peperomioides",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Orquídea Phalaenopsis",
+    "nome_cientifico": "Phalaenopsis amabilis",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Cacto",
+    "nome_cientifico": "Cactaceae",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "solo completamente seco",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Lírio-da-paz #21",
+    "nome_cientifico": "Spathiphyllum wallisii",
+    "temperatura_ideal_celsius": "15–28",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "Meia-sombra / luz indireta"
+  },
+  {
+    "nome_popular": "Espada-de-São-Jorge #22",
+    "nome_cientifico": "Sansevieria trifasciata",
+    "temperatura_ideal_celsius": "15–30",
+    "frequencia_rega": "cada 10–15 dias",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Samambaia #23",
+    "nome_cientifico": "Nephrolepis exaltata",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "2–3×/semana",
+    "luz": "indireta/sombra clara"
+  },
+  {
+    "nome_popular": "Jade #24",
+    "nome_cientifico": "Crassula ovata",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "1×/semana",
+    "luz": "sol pleno a meia-sombra"
+  },
+  {
+    "nome_popular": "Kalanchoe #25",
+    "nome_cientifico": "Kalanchoe spp.",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "2×/semana (verão), 1×/sem (inverno)",
+    "luz": "meia-sombra + sol"
+  },
+  {
+    "nome_popular": "Palmeira-ráfis #26",
+    "nome_cientifico": "Rhapis excelsa",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "1×/semana",
+    "luz": "meia-sombra"
+  },
+  {
+    "nome_popular": "Clorofito #27",
+    "nome_cientifico": "Chlorophytum comosum",
+    "temperatura_ideal_celsius": "15–27",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta a meia-sombra"
+  },
+  {
+    "nome_popular": "Aloe vera #28",
+    "nome_cientifico": "Aloe vera",
+    "temperatura_ideal_celsius": "15–35",
+    "frequencia_rega": "a cada 15 dias",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Jiboia #29",
+    "nome_cientifico": "Epipremnum aureum",
+    "temperatura_ideal_celsius": "17–30",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Zamioculca #30",
+    "nome_cientifico": "Zamioculcas zamiifolia",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "mensal",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Monstera #31",
+    "nome_cientifico": "Monstera deliciosa",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "quando solo seco 1cm",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus elastica #32",
+    "nome_cientifico": "Ficus elastica",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "solo levemente úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus lyrata #33",
+    "nome_cientifico": "Ficus lyrata",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Aspidistra #34",
+    "nome_cientifico": "Aspidistra elatior",
+    "temperatura_ideal_celsius": "16–24",
+    "frequencia_rega": "quando solo seco",
+    "luz": "baixa"
+  },
+  {
+    "nome_popular": "Hera inglesa #35",
+    "nome_cientifico": "Hedera helix",
+    "temperatura_ideal_celsius": "15–21",
+    "frequencia_rega": "solo úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Bromélia #36",
+    "nome_cientifico": "Bromeliaceae",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "manter roseta úmida",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Calathea #37",
+    "nome_cientifico": "Calathea spp.",
+    "temperatura_ideal_celsius": "18–29",
+    "frequencia_rega": "solo úmido",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Pilea #38",
+    "nome_cientifico": "Pilea peperomioides",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Orquídea Phalaenopsis #39",
+    "nome_cientifico": "Phalaenopsis amabilis",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Cacto #40",
+    "nome_cientifico": "Cactaceae",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "solo completamente seco",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Lírio-da-paz #41",
+    "nome_cientifico": "Spathiphyllum wallisii",
+    "temperatura_ideal_celsius": "15–28",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "Meia-sombra / luz indireta"
+  },
+  {
+    "nome_popular": "Espada-de-São-Jorge #42",
+    "nome_cientifico": "Sansevieria trifasciata",
+    "temperatura_ideal_celsius": "15–30",
+    "frequencia_rega": "cada 10–15 dias",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Samambaia #43",
+    "nome_cientifico": "Nephrolepis exaltata",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "2–3×/semana",
+    "luz": "indireta/sombra clara"
+  },
+  {
+    "nome_popular": "Jade #44",
+    "nome_cientifico": "Crassula ovata",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "1×/semana",
+    "luz": "sol pleno a meia-sombra"
+  },
+  {
+    "nome_popular": "Kalanchoe #45",
+    "nome_cientifico": "Kalanchoe spp.",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "2×/semana (verão), 1×/sem (inverno)",
+    "luz": "meia-sombra + sol"
+  },
+  {
+    "nome_popular": "Palmeira-ráfis #46",
+    "nome_cientifico": "Rhapis excelsa",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "1×/semana",
+    "luz": "meia-sombra"
+  },
+  {
+    "nome_popular": "Clorofito #47",
+    "nome_cientifico": "Chlorophytum comosum",
+    "temperatura_ideal_celsius": "15–27",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta a meia-sombra"
+  },
+  {
+    "nome_popular": "Aloe vera #48",
+    "nome_cientifico": "Aloe vera",
+    "temperatura_ideal_celsius": "15–35",
+    "frequencia_rega": "a cada 15 dias",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Jiboia #49",
+    "nome_cientifico": "Epipremnum aureum",
+    "temperatura_ideal_celsius": "17–30",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Zamioculca #50",
+    "nome_cientifico": "Zamioculcas zamiifolia",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "mensal",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Monstera #51",
+    "nome_cientifico": "Monstera deliciosa",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "quando solo seco 1cm",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus elastica #52",
+    "nome_cientifico": "Ficus elastica",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "solo levemente úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus lyrata #53",
+    "nome_cientifico": "Ficus lyrata",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Aspidistra #54",
+    "nome_cientifico": "Aspidistra elatior",
+    "temperatura_ideal_celsius": "16–24",
+    "frequencia_rega": "quando solo seco",
+    "luz": "baixa"
+  },
+  {
+    "nome_popular": "Hera inglesa #55",
+    "nome_cientifico": "Hedera helix",
+    "temperatura_ideal_celsius": "15–21",
+    "frequencia_rega": "solo úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Bromélia #56",
+    "nome_cientifico": "Bromeliaceae",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "manter roseta úmida",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Calathea #57",
+    "nome_cientifico": "Calathea spp.",
+    "temperatura_ideal_celsius": "18–29",
+    "frequencia_rega": "solo úmido",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Pilea #58",
+    "nome_cientifico": "Pilea peperomioides",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Orquídea Phalaenopsis #59",
+    "nome_cientifico": "Phalaenopsis amabilis",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Cacto #60",
+    "nome_cientifico": "Cactaceae",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "solo completamente seco",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Lírio-da-paz #61",
+    "nome_cientifico": "Spathiphyllum wallisii",
+    "temperatura_ideal_celsius": "15–28",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "Meia-sombra / luz indireta"
+  },
+  {
+    "nome_popular": "Espada-de-São-Jorge #62",
+    "nome_cientifico": "Sansevieria trifasciata",
+    "temperatura_ideal_celsius": "15–30",
+    "frequencia_rega": "cada 10–15 dias",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Samambaia #63",
+    "nome_cientifico": "Nephrolepis exaltata",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "2–3×/semana",
+    "luz": "indireta/sombra clara"
+  },
+  {
+    "nome_popular": "Jade #64",
+    "nome_cientifico": "Crassula ovata",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "1×/semana",
+    "luz": "sol pleno a meia-sombra"
+  },
+  {
+    "nome_popular": "Kalanchoe #65",
+    "nome_cientifico": "Kalanchoe spp.",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "2×/semana (verão), 1×/sem (inverno)",
+    "luz": "meia-sombra + sol"
+  },
+  {
+    "nome_popular": "Palmeira-ráfis #66",
+    "nome_cientifico": "Rhapis excelsa",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "1×/semana",
+    "luz": "meia-sombra"
+  },
+  {
+    "nome_popular": "Clorofito #67",
+    "nome_cientifico": "Chlorophytum comosum",
+    "temperatura_ideal_celsius": "15–27",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta a meia-sombra"
+  },
+  {
+    "nome_popular": "Aloe vera #68",
+    "nome_cientifico": "Aloe vera",
+    "temperatura_ideal_celsius": "15–35",
+    "frequencia_rega": "a cada 15 dias",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Jiboia #69",
+    "nome_cientifico": "Epipremnum aureum",
+    "temperatura_ideal_celsius": "17–30",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Zamioculca #70",
+    "nome_cientifico": "Zamioculcas zamiifolia",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "mensal",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Monstera #71",
+    "nome_cientifico": "Monstera deliciosa",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "quando solo seco 1cm",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus elastica #72",
+    "nome_cientifico": "Ficus elastica",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "solo levemente úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus lyrata #73",
+    "nome_cientifico": "Ficus lyrata",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Aspidistra #74",
+    "nome_cientifico": "Aspidistra elatior",
+    "temperatura_ideal_celsius": "16–24",
+    "frequencia_rega": "quando solo seco",
+    "luz": "baixa"
+  },
+  {
+    "nome_popular": "Hera inglesa #75",
+    "nome_cientifico": "Hedera helix",
+    "temperatura_ideal_celsius": "15–21",
+    "frequencia_rega": "solo úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Bromélia #76",
+    "nome_cientifico": "Bromeliaceae",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "manter roseta úmida",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Calathea #77",
+    "nome_cientifico": "Calathea spp.",
+    "temperatura_ideal_celsius": "18–29",
+    "frequencia_rega": "solo úmido",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Pilea #78",
+    "nome_cientifico": "Pilea peperomioides",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Orquídea Phalaenopsis #79",
+    "nome_cientifico": "Phalaenopsis amabilis",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Cacto #80",
+    "nome_cientifico": "Cactaceae",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "solo completamente seco",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Lírio-da-paz #81",
+    "nome_cientifico": "Spathiphyllum wallisii",
+    "temperatura_ideal_celsius": "15–28",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "Meia-sombra / luz indireta"
+  },
+  {
+    "nome_popular": "Espada-de-São-Jorge #82",
+    "nome_cientifico": "Sansevieria trifasciata",
+    "temperatura_ideal_celsius": "15–30",
+    "frequencia_rega": "cada 10–15 dias",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Samambaia #83",
+    "nome_cientifico": "Nephrolepis exaltata",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "2–3×/semana",
+    "luz": "indireta/sombra clara"
+  },
+  {
+    "nome_popular": "Jade #84",
+    "nome_cientifico": "Crassula ovata",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "1×/semana",
+    "luz": "sol pleno a meia-sombra"
+  },
+  {
+    "nome_popular": "Kalanchoe #85",
+    "nome_cientifico": "Kalanchoe spp.",
+    "temperatura_ideal_celsius": "15–24",
+    "frequencia_rega": "2×/semana (verão), 1×/sem (inverno)",
+    "luz": "meia-sombra + sol"
+  },
+  {
+    "nome_popular": "Palmeira-ráfis #86",
+    "nome_cientifico": "Rhapis excelsa",
+    "temperatura_ideal_celsius": "18–25",
+    "frequencia_rega": "1×/semana",
+    "luz": "meia-sombra"
+  },
+  {
+    "nome_popular": "Clorofito #87",
+    "nome_cientifico": "Chlorophytum comosum",
+    "temperatura_ideal_celsius": "15–27",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta a meia-sombra"
+  },
+  {
+    "nome_popular": "Aloe vera #88",
+    "nome_cientifico": "Aloe vera",
+    "temperatura_ideal_celsius": "15–35",
+    "frequencia_rega": "a cada 15 dias",
+    "luz": "sol pleno"
+  },
+  {
+    "nome_popular": "Jiboia #89",
+    "nome_cientifico": "Epipremnum aureum",
+    "temperatura_ideal_celsius": "17–30",
+    "frequencia_rega": "1–2×/semana",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Zamioculca #90",
+    "nome_cientifico": "Zamioculcas zamiifolia",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "mensal",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Monstera #91",
+    "nome_cientifico": "Monstera deliciosa",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "quando solo seco 1cm",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus elastica #92",
+    "nome_cientifico": "Ficus elastica",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "solo levemente úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Ficus lyrata #93",
+    "nome_cientifico": "Ficus lyrata",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Aspidistra #94",
+    "nome_cientifico": "Aspidistra elatior",
+    "temperatura_ideal_celsius": "16–24",
+    "frequencia_rega": "quando solo seco",
+    "luz": "baixa"
+  },
+  {
+    "nome_popular": "Hera inglesa #95",
+    "nome_cientifico": "Hedera helix",
+    "temperatura_ideal_celsius": "15–21",
+    "frequencia_rega": "solo úmido",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Bromélia #96",
+    "nome_cientifico": "Bromeliaceae",
+    "temperatura_ideal_celsius": "18–27",
+    "frequencia_rega": "manter roseta úmida",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Calathea #97",
+    "nome_cientifico": "Calathea spp.",
+    "temperatura_ideal_celsius": "18–29",
+    "frequencia_rega": "solo úmido",
+    "luz": "baixa a indireta"
+  },
+  {
+    "nome_popular": "Pilea #98",
+    "nome_cientifico": "Pilea peperomioides",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "quando solo seco",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Orquídea Phalaenopsis #99",
+    "nome_cientifico": "Phalaenopsis amabilis",
+    "temperatura_ideal_celsius": "18–26",
+    "frequencia_rega": "1×/semana",
+    "luz": "indireta brilhante"
+  },
+  {
+    "nome_popular": "Cacto #100",
+    "nome_cientifico": "Cactaceae",
+    "temperatura_ideal_celsius": "18–30",
+    "frequencia_rega": "solo completamente seco",
+    "luz": "sol pleno"
+  }
+]
