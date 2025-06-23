@@ -1,16 +1,26 @@
 import model.PlantaCadastrada;
+import model.PlantaJson;
 import service.ClimaService;
 import service.PerenualService;
 import util.Serializador;
 
+import java.io.FileReader;
+import java.lang.reflect.Type;
 import java.time.*;
 import java.util.*;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import adapter.LocalDateAdapter;
 
 public class Main {
     static final String ARQ = "minhas_plantas.dat";
     static List<PlantaCadastrada> minhasPlantas = new ArrayList<>();
 
     public static void main(String[] args) {
+    	
     	Object obj = Serializador.carregar(ARQ);
     	if (obj instanceof List<?>) {
     	    List<?> listaBruta = (List<?>) obj;
@@ -68,14 +78,46 @@ public class Main {
     }
 
     static void monitorar() {
-        for (PlantaCadastrada p : minhasPlantas) {
-            System.out.println(p);
-            try {
-                double temp = ClimaService.obterTemperaturaAtual(p.cidade);
-                System.out.printf("🌡 Temperatura atual em %s: %.1fºC\n", p.cidade, temp);
-            } catch (Exception e) {
-                System.out.println("Erro ao obter clima: " + e.getMessage());
-            }
-        }
+    	for (PlantaCadastrada plantaCadastrada : minhasPlantas) {
+    	    System.out.println("\n🔍 Verificando: " + plantaCadastrada.nome);
+    	    try {
+    	        double temperaturaCidade = ClimaService.obterTemperaturaAtual(plantaCadastrada.cidade);
+    	        System.out.println("🌡 Temperatura em " + plantaCadastrada.cidade + ": " + temperaturaCidade + "°C");
+
+    	        Gson gson = new GsonBuilder()
+    	                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
+    	                .create();
+    	        Type tipoLista = new TypeToken<List<PlantaJson>>() {}.getType();
+    	        FileReader leitor = new FileReader("plantas100.json");
+    	        List<PlantaJson> plantas = gson.fromJson(leitor, tipoLista);
+
+    	        boolean encontrada = false;
+
+    	        for (PlantaJson plantaJson : plantas) {
+    	            // Aqui comparamos nomes. Você pode adaptar com equalsIgnoreCase, ou algum outro critério mais preciso.
+    	            if (plantaJson.nome_popular.equalsIgnoreCase(plantaCadastrada.tipo)) {
+    	                encontrada = true;
+    	                double[] faixa = plantaJson.getFaixaTemperatura();
+
+    	                if (temperaturaCidade >= faixa[0] && temperaturaCidade <= faixa[1]) {
+    	                    System.out.println("✅ Planta '" + plantaCadastrada.nome + "' está na faixa ideal de temperatura.");
+    	                } else {
+    	                    System.out.println("⚠️ Planta '" + plantaCadastrada.nome + "' fora da faixa ideal.");
+    	                    System.out.println("   Faixa ideal: " + faixa[0] + "°C até " + faixa[1] + "°C");
+    	                }
+    	                break; // encontramos a planta, não precisa continuar
+    	            }
+    	        }
+
+    	        if (!encontrada) {
+    	            System.out.println("❌ Tipo '" + plantaCadastrada.tipo + "' não encontrado no banco de plantas.");
+    	        }
+
+    	    } catch (Exception e) {
+    	        System.out.println("Erro: " + e.getMessage());
+    	    }
+    	}
+
     }
+
 }

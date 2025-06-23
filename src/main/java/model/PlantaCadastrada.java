@@ -10,6 +10,11 @@ public class PlantaCadastrada implements Serializable {
     public List<LocalDate> historicoRega = new ArrayList<>();
     public int freqRegaSemanal;
     public Set<DayOfWeek> diasRega;
+    String nome_popular;
+    String nome_cientifico;
+    String temperatura_ideal_celsius;
+    String frequencia_rega;
+    String luz;
 
     public PlantaCadastrada(String nome, String tipo, String cidade, int freq, Set<DayOfWeek> dias) {
         this.nome = nome;
@@ -18,7 +23,19 @@ public class PlantaCadastrada implements Serializable {
         this.freqRegaSemanal = freq;
         this.diasRega = dias;
     }
-
+    
+    public boolean estaNaFaixa(double temperaturaAtual) {
+        try {
+            String faixa = temperatura_ideal_celsius.replace("–", "-").replace("°C", "");
+            String[] partes = faixa.split("-");
+            double min = Double.parseDouble(partes[0].trim());
+            double max = Double.parseDouble(partes[1].trim());
+            return temperaturaAtual >= min && temperaturaAtual <= max;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
     public void regar() {
         historicoRega.add(LocalDate.now());
     }
