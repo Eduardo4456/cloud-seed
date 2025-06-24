@@ -65,11 +65,72 @@ public class GUIPlant extends JFrame {
         painelBotoes.add(btnRegistroRega);
         painelBotoes.add(btnSalvarSair);
 
-        add(new JScrollPane(listaPlantas), BorderLayout.CENTER);
-        add(painelBotoes, BorderLayout.SOUTH);
+        PainelComImagem painelPrincipal = new PainelComImagem("/img/2-removebg-preview2.png");
+        painelPrincipal.setLayout(new BorderLayout());
+        painelPrincipal.add(new JScrollPane(listaPlantas), BorderLayout.CENTER);
+        painelPrincipal.add(painelBotoes, BorderLayout.SOUTH);
+        
+        ImageIcon icon = new ImageIcon("/home/eduardo/eclipse-workspace/com.project.cloudseed/src/main/java/img/2-removebg-preview2.png");
+        if (icon.getIconWidth() == -1) {
+            System.out.println("Imagem não encontrada!");
+        }
+
+        setContentPane(painelPrincipal);
 
         setVisible(true);
+        
+        Font fonte = new Font("SansSerif", Font.PLAIN, 14);
+        listaPlantas.setFont(fonte);
+        btnAdicionar.setFont(fonte); 
+        btnRemover.setFont(fonte);
+        btnRegar.setFont(fonte);
+        btnSugestao.setFont(fonte);
+        btnMonitorar.setFont(fonte);
+        btnRegistroRega.setFont(fonte);
+        btnSalvarSair.setFont(fonte);
+        
+        listaPlantas.setOpaque(false);
+        ((JViewport)((JScrollPane)listaPlantas.getParent().getParent()).getViewport()).setOpaque(false);
+        ((JScrollPane)listaPlantas.getParent().getParent()).setOpaque(false);
+        
+        painelBotoes.setOpaque(false);
+        
+        JButton[] botoes = {btnAdicionar, btnRemover, btnRegar, btnSugestao, btnMonitorar, btnRegistroRega, btnSalvarSair};
+        for (JButton botao : botoes) {
+            estilizarBotao(botao);
+        }
+        
+        listaPlantas.setCellRenderer(new PlantaRenderer());
+    }	
+    
+    private void estilizarBotao(JButton botao) {
+        Color verde = new Color(58, 141, 58); // Verde moderno
+        Color verdeHover = new Color(59, 174, 96); // Verde mais escuro
+
+        botao.setBackground(verde);
+        botao.setForeground(Color.WHITE);
+        botao.setFocusPainted(false);
+        botao.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20)); // padding
+        botao.setFont(new Font("SansSerif", Font.BOLD, 14));
+        botao.setOpaque(true);
+        botao.setContentAreaFilled(true);
+        botao.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        // Efeito hover
+        botao.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                botao.setBackground(verdeHover);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botao.setBackground(verde);
+            }
+        });
+       
     }
+
 
     private void carregarPlantas() {
         Object obj = Serializador.carregar(ARQ);
@@ -134,9 +195,22 @@ public class GUIPlant extends JFrame {
     private void sugestaoPlanta() {
         String tipo = JOptionPane.showInputDialog(this, "Tipo da planta:");
         if (tipo != null && !tipo.isEmpty()) {
-            PerenualService.buscarInformacoesPlanta(tipo);
+            String info = PerenualService.buscarInformacoesPlanta(tipo);
+
+            JTextArea area = new JTextArea(info);
+            area.setEditable(false);
+            area.setLineWrap(true);
+            area.setWrapStyleWord(true);
+            area.setFont(new Font("SansSerif", Font.PLAIN, 14));
+            area.setBackground(new Color(245, 255, 245));
+
+            JScrollPane scrollPane = new JScrollPane(area);
+            scrollPane.setPreferredSize(new Dimension(500, 300));
+
+            JOptionPane.showMessageDialog(this, scrollPane, "Sugestão de Planta", JOptionPane.INFORMATION_MESSAGE);
         }
     }
+
 
     private void monitorarPlantas() {
         StringBuilder sb = new StringBuilder();

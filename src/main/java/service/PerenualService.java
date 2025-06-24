@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 public class PerenualService {
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    public static void buscarInformacoesPlanta(String tipo) {
+    public static String buscarInformacoesPlanta(String tipo) {
         try {
             String chave = "sk-y1S66824d58e0fa9d10452";
             String q = URLEncoder.encode(tipo, StandardCharsets.UTF_8);
@@ -24,21 +24,17 @@ public class PerenualService {
             c.setRequestMethod("GET");
 
             if (c.getResponseCode() != 200) {
-                System.out.println("Erro ao acessar API Perenual");
-                return;
+                return "❌ Erro ao acessar API Perenual.";
             }
 
-            ObjectMapper mapper = new ObjectMapper();
             JsonNode root;
-
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(c.getInputStream()))) {
                 root = mapper.readTree(reader);
             }
 
             JsonNode planta = root.path("data").get(0);
             if (planta == null || planta.isMissingNode()) {
-                System.out.println("Planta não encontrada.");
-                return;
+                return "❌ Planta não encontrada.";
             }
 
             int id = planta.path("id").asInt();
@@ -47,10 +43,10 @@ public class PerenualService {
             String ciclo = planta.path("cycle").asText("");
             String tipoPlanta = planta.path("type").asText("");
 
-            System.out.println("Nome comum: " + nome);
-            System.out.println("Nome cientifico: " + nomeCientifico);
-            System.out.println("Ciclo: " + ciclo);
-            System.out.println("Tipo: " + tipoPlanta);
+            StringBuilder sb = new StringBuilder();
+            sb.append("🌿 Planta encontrada!\n\n");
+            sb.append("📛 Nome comum: ").append(nome).append("\n");
+            sb.append("🔬 Nome científico: ").append(nomeCientifico).append("\n");
 
             // 2. Buscar guia de cuidados
             URL urlCare = new URL("https://perenual.com/api/species-care-guide-list?key=" + chave + "&species_id=" + id);
@@ -58,8 +54,8 @@ public class PerenualService {
             connCare.setRequestMethod("GET");
 
             if (connCare.getResponseCode() != 200) {
-                System.out.println("Erro ao acessar guia de cuidados");
-                return;
+                sb.append("⚠️ Não foi possível carregar guia de cuidados.");
+                return sb.toString();
             }
 
             JsonNode careRoot;
@@ -70,19 +66,21 @@ public class PerenualService {
             JsonNode careData = careRoot.path("data").get(0);
             if (careData != null) {
                 JsonNode sections = careData.path("section");
+                sb.append("🛠 Guia de Cuidados:\n");
                 for (JsonNode s : sections) {
-                    String type = s.path("type").asText();
+                    String title = s.path("type").asText();
                     String desc = s.path("description").asText();
-                    System.out.printf("%s: %s\n", capitalize(type), desc);
+                    sb.append("• ").append(capitalize(title)).append(": ").append(desc).append("\n");
                 }
             }
 
+            return sb.toString();
+
         } catch (Exception e) {
-            System.out.println("Erro: " + e.getMessage());
+            return "Erro ao buscar informações: " + e.getMessage();
         }
     }
 
-    // Utilitário para deixar o nome da seção com a primeira letra maiúscula
     private static String capitalize(String text) {
         if (text == null || text.isEmpty()) return text;
         return text.substring(0, 1).toUpperCase() + text.substring(1);
