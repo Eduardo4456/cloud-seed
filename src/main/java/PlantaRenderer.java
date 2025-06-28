@@ -34,12 +34,12 @@ public class PlantaRenderer extends JPanel implements ListCellRenderer<PlantaCad
         setBorder(BorderFactory.createEmptyBorder(8, 12, 8, 12));
         setBackground(isSelected ? new Color(220, 245, 220) : new Color(240, 255, 240)); // verde claro
 
-        JLabel nome = new JLabel("🌱 " + planta.nome);
+        JLabel nome = new JLabel("🌱 " + planta.getNome());
         nome.setFont(new Font("SansSerif", Font.BOLD, 14));
 
-        String info = "💧 Rega: " + planta.freqRegaSemanal + "x/semana | Última: " +
+        String info = "💧 Rega: " + planta.getFreqRegaSemanal() + "x/semana | Última: " +
                 (planta.getUltimaRega() != null ? planta.getUltimaRega() : "Nunca") +
-                " | Dias: " + formatarDiasRega(planta.diasRega);
+                " | Dias: " + formatarDiasRega(planta.getDiasRega());
 
         JLabel detalhes = new JLabel(info);
         detalhes.setFont(new Font("SansSerif", Font.PLAIN, 12));

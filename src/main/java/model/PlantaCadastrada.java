@@ -6,10 +6,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class PlantaCadastrada implements Serializable {
-    public String nome, tipo, cidade;
-    public List<LocalDate> historicoRega = new ArrayList<>();
-    public int freqRegaSemanal;
-    public Set<DayOfWeek> diasRega;
+    private String nome, tipo, cidade;
+    private List<LocalDate> historicoRega = new ArrayList<>();
+    private int freqRegaSemanal;
+    private Set<DayOfWeek> diasRega;
+    
     String nome_popular;
     String nome_cientifico;
     String temperatura_ideal_celsius;
@@ -43,7 +44,7 @@ public class PlantaCadastrada implements Serializable {
     public LocalDate getUltimaRega() {
         return historicoRega.isEmpty() ? null : historicoRega.get(historicoRega.size() - 1);
     }
-
+    
     public boolean precisaRegar() {
         LocalDate hoje = LocalDate.now();
         if (getUltimaRega() != null && getUltimaRega().isEqual(hoje)) return false;
@@ -52,19 +53,55 @@ public class PlantaCadastrada implements Serializable {
         return nasUltimas7 < freqRegaSemanal;
     }
 
-    public boolean hojeEDiaDeRega() {
-        return diasRega.contains(LocalDate.now().getDayOfWeek());
-    }
+    public String getNome() {
+		return nome;
+	}
 
-    public int diasAteProximaRega() {
-        DayOfWeek hoje = LocalDate.now().getDayOfWeek();
-        List<Integer> ordenados = diasRega.stream()
-                .map(DayOfWeek::getValue).sorted().collect(Collectors.toList());
-        for (int d : ordenados) if (d > hoje.getValue()) return d - hoje.getValue();
-        return 7 - hoje.getValue() + ordenados.get(0);
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    @Override
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public List<LocalDate> getHistoricoRega() {
+		return historicoRega;
+	}
+
+	public void setHistoricoRega(List<LocalDate> historicoRega) {
+		this.historicoRega = historicoRega;
+	}
+
+	public int getFreqRegaSemanal() {
+		return freqRegaSemanal;
+	}
+
+	public void setFreqRegaSemanal(int freqRegaSemanal) {
+		this.freqRegaSemanal = freqRegaSemanal;
+	}
+
+	public Set<DayOfWeek> getDiasRega() {
+		return diasRega;
+	}
+
+	public void setDiasRega(Set<DayOfWeek> diasRega) {
+		this.diasRega = diasRega;
+	}
+
+	@Override
     public String toString() {
         String ult = Optional.ofNullable(getUltimaRega()).map(LocalDate::toString).orElse("Nunca regada");
         String dias = diasRega.stream()
@@ -73,4 +110,5 @@ public class PlantaCadastrada implements Serializable {
         return String.format("🌱 %s (%s) - %s | Última rega: %s | %dx/semana | Dias: %s",
                 nome, tipo, cidade, ult, freqRegaSemanal, dias);
     }
+	
 }

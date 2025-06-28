@@ -188,7 +188,7 @@ public class GUIPlant extends JFrame {
         PlantaCadastrada p = listaPlantas.getSelectedValue();
         if (p != null) {
             p.regar();
-            JOptionPane.showMessageDialog(this, "Planta '" + p.nome + "' regada com sucesso!");
+            JOptionPane.showMessageDialog(this, "Planta '" + p.getNome() + "' regada com sucesso!");
         }
     }
 
@@ -216,11 +216,11 @@ public class GUIPlant extends JFrame {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < modeloLista.getSize(); i++) {
             PlantaCadastrada planta = modeloLista.get(i);
-            sb.append("\n🔍 ").append(planta.nome).append("\n");
+            sb.append("\n🔍 ").append(planta.getNome()).append("\n");
 
             try {
-                double temp = ClimaService.obterTemperaturaAtual(planta.cidade);
-                sb.append("🌡 ").append(planta.cidade).append(": ").append(temp).append("°C\n");
+                double temp = ClimaService.obterTemperaturaAtual(planta.getCidade());
+                sb.append("🌡 ").append(planta.getCidade()).append(": ").append(temp).append("°C\n");
 
                 Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
                 java.lang.reflect.Type tipoLista = new TypeToken<List<PlantaJson>>() {}.getType();
@@ -229,7 +229,7 @@ public class GUIPlant extends JFrame {
 
                 boolean encontrada = false;
                 for (PlantaJson pj : lista) {
-                    if (pj.nome_popular.equalsIgnoreCase(planta.tipo)) {
+                    if (pj.nome_popular.equalsIgnoreCase(planta.getTipo())) {
                         encontrada = true;
                         double[] faixa = pj.getFaixaTemperatura();
                         if (temp >= faixa[0] && temp <= faixa[1]) {
@@ -261,13 +261,13 @@ public class GUIPlant extends JFrame {
             return;
         }
 
-        JFrame frame = new JFrame("Histórico de Regas - " + planta.nome);
+        JFrame frame = new JFrame("Histórico de Regas - " + planta.getNome());
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400, 300);
         frame.setLocationRelativeTo(this);
 
         DefaultListModel<String> model = new DefaultListModel<>();
-        List<LocalDate> historico = planta.historicoRega;
+        List<LocalDate> historico = planta.getHistoricoRega();
         
         if (historico.isEmpty()) {
             model.addElement("Nenhuma rega registrada.");
@@ -281,7 +281,7 @@ public class GUIPlant extends JFrame {
         JList<String> lista = new JList<>(model);
         JScrollPane scroll = new JScrollPane(lista);
 
-        JLabel titulo = new JLabel("Histórico de Regas da Planta: " + planta.nome, JLabel.CENTER);
+        JLabel titulo = new JLabel("Histórico de Regas da Planta: " + planta.getNome(), JLabel.CENTER);
         titulo.setFont(new Font("SansSerif", Font.BOLD, 16));
         titulo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
