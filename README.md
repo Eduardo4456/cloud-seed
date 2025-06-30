@@ -9,3 +9,4 @@ Além de aplicar os conceitos fundamentais de POO, o projeto também promoveu o 
 - Java;
 - Java Swing;
 - Perenual API;
+- weatherapi API.
